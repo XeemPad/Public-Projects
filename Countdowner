@@ -1,0 +1,11 @@
+import datetime as dt
+import time
+
+
+t = input('Введите дату, до которой нужно вести отсчёт в формате ГГГГ.ММ.ДД: ').split('.')
+data = dt.datetime(int(t[0]), int(t[1]), int(t[2]))
+while True:
+    now = dt.datetime.now()
+    delta = data - now
+    print('Осталось:', delta)
+    time.sleep(1)
